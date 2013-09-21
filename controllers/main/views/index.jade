@@ -1,0 +1,18 @@
+extends ../../../views/layout
+
+block head
+
+block content
+  div.container(ng-controller="AuthController")
+    form.form-signin(name='loginForm', _lpchecked="1", ng-submit="login()")
+      h2.form-signin-heading Please sign in
+      input.input-block-level(ng-model="user.email", type="text", placeholder="Email address")
+      input.input-block-level(ng-model="user.password", type="password", placeholder="Password")
+      div(ng-show='loginErrorMessage')
+        p.help-block(ng-model='loginErrorMessage', style='color: red') {{loginErrorMessage}}
+      label.checkbox
+        input(type="checkbox", value="remember-me")
+          span Remember me
+      button.btn.btn-large.btn-primary(type="submit") Sign in
+      p Not a member?
+        span: a(href='/register') Register here
