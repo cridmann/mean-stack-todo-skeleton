@@ -1,0 +1,11 @@
+This is based on the MEAN (mongodb, express, angularjs, nodejs) architecture as seen here: https://github.com/vkarpov15/mean-stack-todo
+
+This skeleton includes:
+-authentication (sessions, cookies, restricted pages, password encryption, account lockouts)
+-get/post/put commands to a todo document model in mongodb
+-REST based routing system
+-form validation using mongoose and angularjs
+
+NOTE:
+I had to change node_modules/express-sessions/index.js to support the way I was using mongoose.  This change
+has not been thoroughly tested.
